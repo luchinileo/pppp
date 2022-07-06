@@ -1,0 +1,68 @@
+ <!DOCTYPE html>
+<html class="page">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CSS container</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body class="page__body">
+    <header class="page__header">
+      <h1 class="page__title">Header</h1>
+    </header>
+
+    <main class="page__content">
+      <article class="news">
+        <h3 class="news__title">Heading 1</h3>
+        <img
+          class="news__image"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Sonnets1609titlepage.jpg/330px-Sonnets1609titlepage.jpg"
+          alt="City"
+        />
+        <p class="news__lead">
+          The sonnet is a short lyrical poem originating from Italian folk. It
+          was prevalent throughout Europe at the beginning of the Renaissance.
+          Its structure is very strict and is divided into two parts: the upper
+          part is eight lines, the lower part is six lines, and each line is ten
+          lines.
+        </p>
+      </article>
+
+      <article class="news">
+        <h3 class="news__title">Heading 2</h3>
+        <p class="news__lead">
+          The sonnet is a short lyrical poem originating from Italian folk. It
+          was prevalent throughout Europe at the beginning of the Renaissance.
+          Its structure is very strict and is divided into two parts: the upper
+          part is eight lines, the lower part is six lines, and each line is ten
+          lines.
+        </p>
+      </article>
+
+      <article class="news">
+        <h3 class="news__title">Heading 3</h3>
+      </article>
+    </main>
+
+    <div class="page__sidebar">
+      <article class="news">
+        <h3 class="news__title">Heading</h3>
+        <img
+          class="news__image"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Sonnets1609titlepage.jpg/330px-Sonnets1609titlepage.jpg"
+          alt="City"
+        />
+        <p class="news__lead">
+          The sonnet is a short lyrical poem originating from Italian folk. It
+          was prevalent throughout Europe at the beginning of the Renaissance.
+          Its structure is very strict and is divided into two parts: the upper
+          part is eight lines, the lower part is six lines, and each line is ten
+          lines.
+        </p>
+      </article>
+    </div>
+
+    <footer class="page__footer">Footer</footer>
+  </body>
+</html>

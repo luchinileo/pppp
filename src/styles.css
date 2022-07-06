@@ -1,0 +1,143 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+}
+
+/* Page */
+
+.page__body {
+  display: grid;
+  grid-template-rows:
+    min-content
+    1fr
+    min-content
+    min-content;
+}
+
+@media (min-width: 600px) {
+  .page__body {
+    grid-template-columns: 300px 1fr;
+  }
+}
+
+.page__header {
+  padding: 20px;
+  background-color: skyblue;
+}
+
+@media (min-width: 600px) {
+  .page__header {
+    grid-column: 1 / -1;
+  }
+}
+
+.page__title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: normal;
+  font-size: 1.5rem;
+}
+
+.page__content {
+  contain: layout inline-size style;
+  display: grid;
+  row-gap: 20px;
+  align-content: start;
+  padding: 20px;
+  background-color: ivory;
+}
+
+@media (min-width: 600px) {
+  .page__content {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+}
+
+.page__sidebar {
+  padding: 20px;
+  background-color: wheat;
+}
+
+@media (min-width: 600px) {
+  .page__sidebar {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+}
+
+.page__footer {
+  padding: 20px;
+  background-color: #fff;
+}
+
+@media (min-width: 600px) {
+  .page__footer {
+    grid-column: 1 / -1;
+  }
+}
+
+/* News */
+
+.news {
+  display: grid;
+  background-color: #e3e3e3;
+}
+
+.news:has(.news__image) {
+  background-color: lightgreen;
+}
+
+.news:not(:has(.news__image), :has(.news__lead)) {
+  background-color: peachpuff;
+}
+
+.news:not(:has(.news__image), :has(.news__lead)) .news__title {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+@container (min-width: 600px) {
+  .news {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.news__title {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 15px;
+  font-weight: normal;
+}
+
+.news__image {
+  order: -1;
+  width: 100%;
+  max-width: 100%;
+}
+
+@container (min-width: 600px) {
+  .news__image {
+    grid-row: span 2;
+    align-self: stretch;
+  }
+}
+
+.news__lead {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0 15px 15px;
+}
